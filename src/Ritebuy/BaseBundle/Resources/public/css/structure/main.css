@@ -1,0 +1,714 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+* {
+	outline: none;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/**----------------------------------------- Web Site Theme Start ------------------------------------**/
+
+body
+{
+	width:100%;
+	background:url(../../images/bg.jpg) repeat #BAB9B7;
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus
+{
+	border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+a
+{
+	text-decoration:none;
+}
+a:hover
+{
+	transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+/**----------------------------------------- Web Site Theme End ------------------------------------**/
+
+
+/**----------------------------------------- CSS Elements Start------------------------------------**/
+.clear {
+	clear: both;
+}
+.fl {
+	float: left !important;
+}
+.fr {
+	float: right !important;
+}
+.color-fff
+{
+	color:#FFF;
+}
+.min-height600
+{
+	min-height:600px;
+}
+/**--------------------------------- CSS Elements End -------------------------------------------------------**/
+
+
+/**--------------------------------- Main structure Start ---------------------------------------------------**/
+.wrapper
+{
+	max-width:1200px;
+	width:100%;
+	margin:0 auto;
+	margin-bottom:25px;
+	padding:0px 15px 0px 15px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	position:relative;
+}
+
+/**--------------------------------- Header Start -----------------------------------------------------------**/
+.header
+{
+	width:100%;
+	float:left;
+	padding-bottom:10px;
+	border-bottom:4px solid #2e6299;
+	border-bottom-left-radius:8px;
+	border-bottom-right-radius:8px;
+	animation-name:slideInDown;
+	-moz-animation-name:slideInDown;
+	-ms-animation-name:slideInDown;
+	-o-animation-name:slideInDown;
+	-webkit-animation-name:slideInDown;
+}
+.h-aside
+{
+	float:left;
+	margin:20px 0px 0px 0px;
+	animation-name:slideInLeft;
+	-moz-animation-name:slideInLeft;
+	-ms-animation-name:slideInLeft;
+	-o-animation-name:slideInLeft;
+	-webkit-animation-name:slideInLeft;
+	
+}
+.h-aside a img
+{
+	width:200px;
+}
+.h-section
+{
+	min-width:40%;
+	float:right;
+	-webkit-transition:all 1.0s ease-in-out;
+  -moz-transition:all 1.0s ease-in-out;
+  -o-transition:all 1.0s ease-in-out;
+  transition:all 1.0s ease-in-out;
+}
+.h-section-box-1
+{
+	min-width:40%;
+	min-height:40px;
+	float:left;
+	padding:8px 10px 8.5px 10px;
+	background:rgba(170,170,170,0.8);
+	border-radius:0px 0px 5px 5px;
+	-moz-border-radius:0px 0px 5px 5px;
+	-ms-border-radius:0px 0px 5px 5px;
+	-o-border-radius:0px 0px 5px 5px;
+	-webkit-border-radius:0px 0px 5px 5px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	animation-name:slideInRight;
+  -moz-animation-name:slideInRight;
+  -ms-animation-name:slideInRight;
+  -o-animation-name:slideInRight;
+  -webkit-animation-name:slideInRight;
+}
+.h-section-box-1 ul
+{
+	float:left;
+}
+.h-section-box-1 ul li
+{
+	float:left;
+	margin:4px 10px 0px 5px;
+	font-size:13px;
+	color:#333;
+}
+.h-section-box-1 ul li.active a
+{
+	color:#FFF;
+}
+.h-section-box-1 ul li:after
+{
+	content:"|";
+	font-size:13px;
+	color:#333;
+	position:relative;
+	right:-6px;
+}
+.h-section-box-1 ul li:last-child:after
+{
+	content:"";
+}
+.h-section-box-1 ul li a
+{
+	color:#333;
+	text-decoration:none;
+}
+.h-section-box-1 ul li a:hover
+{
+	color:#fff;
+}
+.translate-box
+{
+	float:left;
+	margin-left:30px;
+}
+.translate-box label
+{
+	float:right;
+	font-size:13px;
+	color:#333;
+	margin:4px 8px 0px 0px;
+}
+#google_translate_element
+{
+	float:right;
+	margin:0px 5px 0px 0px;
+}
+.h-section-box-2
+{
+	width:100%;
+	float:left;
+	margin:26px 0px 0px 0px;
+}
+.nav
+{
+	float:right;
+	position:relative;
+	bottom:-6px;
+	animation-name:fadeInUp;
+	-moz-animation-name:fadeInUp;
+	-ms-animation-name:fadeInUp;
+	-o-animation-name:fadeInUp;
+	-webkit-animation-name:fadeInUp;
+}
+.nav ul
+{
+}
+.nav ul li
+{
+	float:left;
+	margin-left:5px;
+}
+.nav ul li:last-child a
+{
+	border-radius:0px 0px 5px 0px;
+}
+.nav ul li a
+{
+	text-decoration:none;
+	padding:5px 10px 5px 10px;
+	background:#f26900;
+	font-size:14px;
+	color:#FFF;
+}
+.nav ul li a:hover
+{
+	background:#d85f02;
+}
+/**--------------------------------- Header End -----------------------------------------------------------**/
+
+/**--------------------------------- Home Banner Spotting Start--------------------------------------------**/
+.slider-main
+{
+	width:99%;
+	float:left;
+	padding:0px 0.5% 0px 0.5%;
+	animation-name:slideInRight;
+  -moz-animation-name:slideInRight;
+  -ms-animation-name:slideInRight;
+  -o-animation-name:slideInRight;
+  -webkit-animation-name:slideInRight;
+  position:relative;
+}
+.slider-main:after
+{
+	content:"";
+	position:absolute;
+	left:0px;
+	bottom:-42px;
+	width:100%;
+	height:42px;
+	background:url(../../images/home-main-slider/shadow-top.png) no-repeat bottom center;
+	background-size:100% auto;
+	z-index:-1;
+}
+.bxslider li
+{
+	overflow:hidden !important;
+}
+.slider-main .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active
+{
+	background:#f26900 !important;
+}
+/**--------------------------------- Home Banner Spotting End-------------------------------------------------**/
+
+/**--------------------------------- Post Ad Search Box Start-------------------------------------------------**/
+.post-ad-search-box-main
+{
+	width:100%;
+	float:left;
+	margin:40px 0px 30px 0px;
+	padding:10px 0px 10px 0px;
+}
+.post-ad-search-box-main > a
+{
+	width:37.8%;
+	float:left;
+	padding:10px 0px 10px 0px;
+	text-align:center;
+	border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+	background:rgba(242,105,0,0.8);
+	color:#fff;
+	margin:20px 0px 0px 0px;
+	cursor:pointer;
+}
+.post-ad-search-box-main > a:hover
+{
+	background:rgba(216,95,2,0.8);
+}
+.post-ad-search-box-main > span
+{
+	width:3.6%;
+	float:left;
+	text-align:center;
+	line-height:75px;
+}
+.post-ad-search-box-main > input[type="text"]
+{
+	width:77.3%;
+	display:none;
+	padding: 12px 12px;
+	margin-bottom:20px;
+}
+.carton-box
+{
+	width:20%;
+	float:left;
+	min-height:166px;
+}
+.carton-box img
+{
+	display:none;
+	position:absolute;
+	top:22%;
+}
+.carton-box img:nth-child(2)
+{
+	left: 62.5%;
+    top: 28.7%;
+}
+.display-block
+{
+	animation-name:bounceInDown;
+	-moz-animation-name:bounceInDown;
+	-ms-animation-name:bounceInDown;
+	-o-animation-name:bounceInDown;
+	-webkit-animation-name:bounceInDown;
+	display:block !important;
+}
+.cookie-text
+{
+	float:left;
+	width:80%;
+	font-weight:600;
+}
+.cookie-text a:first-of-type {
+    background:rgba(170, 170, 170, 0.8);
+    border-radius: 3px;
+    color: #1a1a1a;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    padding: 5px;
+}
+.cookie-text a
+{
+	color:#e81818;
+}
+/**--------------------------------- Post Ad Search Box End-------------------------------------------------**/
+
+/**--------------------------------- Ad Right Box Start-------------------------------------------------**/
+.home-ad-section
+{
+	width:28%;
+	float:right;
+}
+.home-ad-section ul
+{
+	float:left;
+}
+.home-ad-section ul li
+{
+	width:100%;
+	float:left;
+	margin-bottom:20px;
+}
+.home-ad-section ul li a img
+{
+	width:100%;
+}
+/**--------------------------------- Ad Right Box End-------------------------------------------------**/
+
+/**--------------------------------- Category Box start-------------------------------------------------**/
+.home-content-left-main
+{
+	width:70%;
+	float:left;
+}
+.home-category-section
+{
+	width:100%;
+	float:left;
+}
+.section-heading
+{
+	width:100%;
+	float:left;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	background:rgba(170, 170, 170, 0.8);
+	padding:10px 0px 12px 15px;
+	font-weight:600;
+}
+.home-category-section ul
+{
+	width:100%;
+	float:left;
+	list-style:none;
+	background:#fff;
+	padding-top:20px;
+}
+.home-category-section ul li
+{
+	width:17%;
+	float:left;
+	text-align:center;
+	min-height:155px;
+	margin-left:20px;
+}
+.home-category-section ul li a {
+    background: #ffffff;
+    border: 3px solid #fff;
+    border-radius: 40px 40px 100% 100%;
+    height: 90px;
+    padding: 20px;
+    width: 90px;
+	display:inline-block;
+	box-shadow: 1px 1px 5px 1px rgba(204, 204, 204, 0.5);
+	overflow:hidden;
+}
+.home-category-section ul li a img
+{
+	width:80%;
+}
+.home-category-section ul li a:hover
+{
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.home-category-section ul li a:hover img
+{
+	animation-name:zoomIn;
+  -moz-animation-name:zoomIn;
+  -ms-animation-name:zoomIn;
+  -o-animation-name:zoomIn;
+  -webkit-animation-name:zoomIn;
+}
+/**--------------------------------- Category Box End-------------------------------------------------**/
+
+
+/**--------------------------------- Content Center Ad Box Start-------------------------------------------**/
+
+.content-center-banner
+{
+	width:100%;
+	float:left;
+	margin:20px 0 20px 0;
+}
+.content-center-banner a img
+{
+	width:100%;
+}
+
+/**--------------------------------- Content Center Ad Box End-------------------------------------------------**/
+
+/**--------------------------------- Product Ad Box Start-------------------------------------------------**/
+
+.product-main
+{
+	width:100%;
+	float:left;
+}
+.product-main ul
+{
+	width:100%;
+	float:left;
+	list-style:none;
+	background:#fff;
+	padding:20px 20px 0px 20px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+.product-main ul li
+{
+	width:24%;
+	float:left;
+	padding:10px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-shadow: 1px 1px 5px 1px rgba(204, 204, 204, 0.5);
+	margin-left:10px;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.product-main ul li:first-child
+{
+	margin-left:0;
+}
+.product-main ul li:nth-child(4n+1)
+{
+	margin-left:0;
+}
+.product-main ul li:hover
+{
+	box-shadow: 1px 1px 10px 2px rgba(204, 204, 204, 0.8);
+    transition: all 0.3s ease-in-out 0s;
+}
+.product-main ul li:hover img
+{
+	animation-name:fadeInDown;
+	-moz-animation-name:fadeInDown;
+	-ms-animation-name:fadeInDown;
+	-o-animation-name:fadeInDown;
+	-webkit-animation-name:fadeInDown;
+}
+.product-main ul li:hover strong
+{
+	animation-name:fadeInRight;
+	-ms-animation-name:fadeInRight;
+	-moz-animation-name:fadeInRight;
+	-o-animation-name:fadeInRight;
+	-webkit-animation-name:fadeInRight;
+}
+.product-main ul li:hover span
+{
+	animation-name:fadeInLeft;
+	-moz-animation-name:fadeInLeft;
+	-ms-animation-name:fadeInLeft;
+	-o-animation-name:fadeInLeft;
+	-webkit-animation-name:fadeInLeft;
+}
+.product-main ul li:hover a
+{
+	animation-name:fadeInUp;
+	-moz-animation-name:fadeInUp;
+	-ms-animation-name:fadeInUp;
+	-o-animation-name:fadeInUp;
+	-webkit-animation-name:fadeInUp;
+}
+.product-main ul li img
+{
+	width:100%;
+	float:left;
+	margin-bottom:15px;
+}
+.product-main ul li strong
+{
+	width:100%;
+	float:left;
+	margin-bottom:15px;
+	font-size:13px;
+}
+.product-main ul li span
+{
+	width:100%;
+	float:left;
+	font-size:12px;
+	margin-bottom:10px;
+}
+.product-main ul li span i
+{
+	float:left;
+	 margin-right: 6px;
+    text-align: center;
+    width: 16px;
+	
+}
+.product-main ul li a
+{
+	width:100%;
+	float:left;
+	text-align:center;
+	background:#f26900;
+	padding:5px 0px 5px 0px;
+	font-size:12px;
+	margin-top:8px;
+	color:#fff;
+}
+.product-main ul li a:hover
+{
+	background:#e46402;
+}
+
+/**--------------------------------- Product Ad Box End-------------------------------------------------**/
+
+/**--------------------------------- Footer Start-------------------------------------------------**/
+
+.footer-drop-menu
+{
+	width:100%;
+	float:left;
+	background:#33363d;
+	padding-top:30px;
+	padding-bottom:30px;
+	display:none;
+}
+.footer-drop-menu ul
+{
+	width:20%;
+	float:left;
+}
+.footer-drop-menu ul strong
+{
+	width:100%;
+	float:left;
+	color:#989a9d;
+	margin-bottom:15px;
+	font-size:15px;
+}
+.footer-drop-menu ul li
+{
+	width:90%;
+	float:left;
+	margin-bottom:9px;
+	margin-left:6px;
+}
+.footer-drop-menu ul li a
+{
+	font-size:13px;
+	color:#989a9d;
+}
+.footer-drop-menu ul li a:hover
+{
+	color:#c9c7c7;
+}
+.footer-menu
+{
+	width:100%;
+	float: left;
+    height: 35px;
+	background:#25272c;
+}
+.footer-menu p
+{
+	float:left;
+	margin:10px 0px 0px 0px;
+	color:#fff;
+	font-size:13px;
+	width:33.3%;
+}
+.footer-menu span
+{
+	width:33.3%;
+	float:left;
+	text-align:center;
+	margin:10px 0px 0px 0px;
+}
+.footer-menu span a
+{
+	color:#FFF;
+}
+.footer-menu span .fa-chevron-up.active
+{
+	 transform: rotate(177deg);
+}
+.social-icons
+{
+	float:right;
+	margin:10px 0px 0px 0px;
+}
+.social-icons strong
+{
+	color:#FFF;
+}
+.social-icons a
+{
+	  width: 30px;
+  color: #FFF;
+  padding: 10px 0px 10px 0px;
+  background: #f26900;
+  float: right;
+  text-align: center;
+  margin-top: -10px;
+  margin-left:1px;
+}
+/**--------------------------------- Footer End-------------------------------------------------**/
+

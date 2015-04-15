@@ -1,0 +1,4 @@
+services:
+#    ritebuy_base.example:
+#        class: Ritebuy\BaseBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

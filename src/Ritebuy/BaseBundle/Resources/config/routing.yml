@@ -1,0 +1,3 @@
+ritebuy_base_homepage:
+    path:     /
+    defaults: { _controller: RitebuyBaseBundle:Default:index }

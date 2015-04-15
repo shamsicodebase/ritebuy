@@ -1,0 +1,456 @@
+{% extends "::base.html.twig" %}
+
+{% block title 'Ritebuy' %}
+{% block stylesheets %}
+{% if app.environment == 'dev' %}
+		
+		<!-----------------------------------------------{ CSS Start }------------------------------------->
+
+<!-----structure for desktop------>
+<link href="{{ asset('bundles/ritebuybase/css/structure/main.css') }}" rel="stylesheet" type="text/css">
+<!-----structure------>
+
+<!-------animation----------->
+<link href="{{ asset('bundles/ritebuybase/css/animation/animation.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('bundles/ritebuybase/css/animation/jquery.bxslider.css') }}" rel="stylesheet" type="text/css">
+<!-------animation----------->
+
+<!----icons------->
+<link href="{{ asset('bundles/ritebuybase/css/icons/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+<!----icons------->
+
+
+
+{% else %}
+
+    {% stylesheets
+                'bundles/ritebuybase/css/structure/main.css'
+				'bundles/ritebuybase/css/animation/animation.css'
+				'bundles/ritebuybase/css/animation/jquery.bxslider.css'
+				'bundles/ritebuybase/css/icons/font-awesome.min.css'
+                filter='cssrewrite'
+                filter='yui_css'
+                output='css/main-min.css'
+    %}
+    {% endstylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/main-min.css') }}{% if cache_buster_on %}{% endif %}" />
+{% endif %}
+<!----Fonts------->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,700italic,700,800,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<!----Fonts------->
+
+<!---------------------------------------------------{ CSS End }------------------------------------->
+{% endblock %}
+{% block body %}
+    <!-------- Canvas Container Start-------->
+<section class="wrapper min-height600">
+
+
+<!-------- Header Start-------->
+<section class="header animated">
+
+<div class="h-aside animated">
+<a href="#"><img src="{{ asset('bundles/ritebuybase/images/logo.png') }}" alt="" /></a>
+</div>
+
+<div class="h-section">
+
+<div class="h-section-box-1 animated">
+<ul>
+<li class="active"><a href="#"><i class="fa fa-user"></i> Hi Muhammad</a></li>
+<li><a href="#"><i class="fa fa-archive"></i> My Account</a></li>
+<li><a href="#"><i class="fa fa-user-plus"></i> Signup</a></li>
+<li><a href="#"><i class="fa fa-sign-in"></i> Login</a></li>
+<li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+
+<li><i class="fa fa-money"></i> Currency: &nbsp;<a href="#"><i class="fa fa-gbp color-fff"></i></a></li>
+</ul>
+
+<div class="translate-box">
+<div id="google_translate_element"></div>
+<label for="name"> Translate:</label>
+</div>
+
+</div>
+
+<div class="clear"></div>
+
+<div class="h-section-box-2">
+<div class="nav animated">
+<ul>
+<li><a href="#">Featured Ads</a></li>
+<li><a href="#">BumpUp Ads</a></li>
+<li><a href="#">Help</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</section>
+<!-------- Header End-------->
+
+<!-------- Banner Spotting Start-------->
+<section class="slider-main animated">
+
+<ul class="bxslider">
+  <li><img src="{{ asset('bundles/ritebuybase/images/home-main-slider/slider-01.jpg') }}" alt="" /></li>
+  <li><img src="{{ asset('bundles/ritebuybase/images/home-main-slider/slider-02.jpg') }}" alt="" /></li>
+  <li><img src="{{ asset('bundles/ritebuybase/images/home-main-slider/slider-03.jpg') }}" alt="" /></li>
+  <li><img src="{{ asset('bundles/ritebuybase/images/home-main-slider/slider-01.jpg') }}" alt="" /></li>
+  <li><img src="{{ asset('bundles/ritebuybase/images/home-main-slider/slider-02.jpg') }}" alt="" /></li>
+  <li><img src="{{ asset('bundles/ritebuybase/images/home-main-slider/slider-03.jpg') }}" alt="" /></li>
+</ul>
+
+</section>
+<!-------- Banner Spotting End-------->
+
+
+<!-------- Ad Post Search Box Start-------->
+<section class="post-ad-search-box-main">
+
+<div class="carton-box">
+<img src="{{ asset('bundles/ritebuybase/images/carton01.png') }}" alt="" class="animated" />
+<img src="{{ asset('bundles/ritebuybase/images/carton02.png') }}" alt="" class="animated" />
+</div>
+
+<a href="#"><i class="fa fa-upload"></i> Post an Ad</a>
+<span>OR</span>
+<a id="search-show"><i class="fa fa-search"></i> Search</a>
+
+<input type="text" placeholder="Search with  your keywords" value="" id="input-ad">
+
+<div class="cookie-text">
+RiteBuy uses cookies. By continuing to browse this site you are agreeing to our use of cookies. <a href="#">Click here to find out more.</a> <a href="#"><i class="fa fa-times-circle"></i></a>
+</div>
+
+</section>
+<!-------- Ad Post Search Box End-------->
+
+<section class="home-content-left-main">
+
+<!----home-category-section Start------>
+<div class="home-category-section">
+<h1 class="section-heading">Browse by Category</h1>
+
+<ul>
+
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img1.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img2.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img3.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img4.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img5.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img6.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img7.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img8.png') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img9.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img10.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img11.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img12.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img13.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img14.jpg') }}" class="animated" alt="" /></a></li>
+<li><a href="#"><img src="{{ asset('bundles/ritebuybase/images/category-icons/categories-img15.jpg') }}" class="animated" alt="" /></a></li>
+
+</ul>
+</div>
+<!----home-category-section End------>
+
+
+<!------Content Slider---------------->
+<div class="content-center-banner">
+<a href="#"><img src="{{ asset('bundles/ritebuybase/images/content-banner/pros-slide-midsearch-banner.jpg') }}" alt="" /></a>
+</div>
+<!------Content Slider---------------->
+
+
+
+<!------Product Section Start---------------->
+<div class="product-main">
+<h1 class="section-heading">Recent Uploaded</h1>
+
+<ul>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+<li>
+<img src="{{ asset('bundles/ritebuybase/images/test-ad.png') }}" class="animated" alt="" />
+<strong class="animated">BABYZEN YOYO 0+ 0-6 </strong>
+<span class="animated"><i class="fa fa-shopping-cart"></i> €1.00(Aprox: £0.7329)</span>
+<span class="animated"><i class="fa fa-map-marker"></i>  Galway </span>
+<span class="animated"><i class="fa fa-bars"></i>  Car Parts</span>
+<a class="animated" href="#">View details</a>
+</li>
+
+</ul>
+</div>
+<!------Product Section End---------------->
+
+
+</div>
+
+
+</section>
+
+<!-----home-ad-section Right Side----->
+<section class="home-ad-section">
+<ul>
+<li>
+<a href="#"><img src="{{ asset('bundles/ritebuybase/images/home-right-banners/RightSideBanner1.jpg') }}" alt="" /></a>
+</li>
+
+<li>
+<a href="#"><img src="{{ asset('bundles/ritebuybase/images/home-right-banners/RightSideBanner2.jpg') }}" alt="" /></a>
+</li>
+
+<li>
+<a href="#"><img src="{{ asset('bundles/ritebuybase/images/home-right-banners/RightSideBanner3.jpg') }}" alt="" /></a>
+</li>
+
+<li>
+<a href="#"><img src="{{ asset('bundles/ritebuybase/images/home-right-banners/RightSideBanner4.jpg') }}" alt="" /></a>
+</li>
+
+</ul>
+</section>
+<!-----home-ad-section Right Side----->
+
+
+<div class="clear"></div>
+</section>
+<!-------- Canvas Container End-------->
+<div class="clear"></div>
+
+<section class="footer-drop-menu">
+<section class="wrapper">
+
+<ul>
+<strong><i class="fa fa-lightbulb-o"></i> RiteBuy Features</strong>
+<li><a href="#"><i class="fa fa-caret-right"></i> Featured Ads</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Bump ad</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Northern Ireland</a></li>
+</ul>
+
+<ul>
+<strong><i class="fa fa-link"></i> Useful Information</strong>
+<li><a href="#"><i class="fa fa-caret-right"></i>  Help</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Privacy Policy &amp; Cookies</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Term &amp; Conditions</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Safety &amp; Legal</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Price List</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Contact Us</a></li>
+
+</ul>
+    
+
+
+<ul>
+<strong><i class="fa fa-lightbulb-o"></i> RiteBuy Features</strong>
+<li><a href="#"><i class="fa fa-caret-right"></i> Featured Ads</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Bump ad</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Northern Ireland</a></li>
+</ul>
+
+<ul>
+<strong><i class="fa fa-lightbulb-o"></i> RiteBuy Features</strong>
+<li><a href="#"><i class="fa fa-caret-right"></i> Featured Ads</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Bump ad</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Northern Ireland</a></li>
+</ul>
+
+<ul>
+<strong><i class="fa fa-lightbulb-o"></i> RiteBuy Features</strong>
+<li><a href="#"><i class="fa fa-caret-right"></i> Featured Ads</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Bump ad</a></li>
+<li><a href="#"><i class="fa fa-caret-right"></i> Northern Ireland</a></li>
+</ul>
+
+</section>
+
+
+
+</section>
+
+<div class="footer-menu">
+<section class="wrapper">
+<p>© Copyrights 2015. All Rights Reserved RiteBuy</p>
+<span><a class="sitemap" href="#"><i class="fa fa-chevron-up"></i> sitemap</a></span>
+
+<div class="social-icons">
+<strong>Connect with us:&nbsp;&nbsp;</strong>
+
+<a href="#"><i class="fa fa-google-plus"></i></a>
+<a href="#"><i class="fa fa-twitter-square"></i></a>
+<a href="#"><i class="fa fa-facebook-square"></i></a>
+
+</div>
+
+</section>
+</div>
+
+
+
+
+{% endblock %}
+{% block javascripts %}
+
+<!-------------------------------------------------{ JS Start }--------------------------------------->
+
+<!-------------------- lib -------->
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-------------------- lib -------->
+
+
+{% if app.environment == 'dev' %}
+<!--------------JS Elements-------->
+<script type="text/javascript" src="{{ asset('bundles/ritebuybase/js/jquery-ui.js') }}" ></script>
+<!--------------JS Elements-------->
+
+<!--------------BX Slider --------->
+<script type="text/javascript" src="{{ asset('bundles/ritebuybase/js/jquery.bxslider.js') }}"></script>
+<!--------------BX Slider --------->
+
+
+    {% else %}
+
+        {% javascripts
+                'bundles/ritebuybase/js/jquery-ui.js'
+				'bundles/ritebuybase/js/jquery.bxslider.js'
+                filter='yui_js'
+                output='js/main-min.js'
+        %}
+        {% endjavascripts %}
+
+        <script src="{{ asset('js/main-min.js') }}{% if cache_buster_on %}?v={{ sunzu_version }}{% endif %}"></script>
+    {% endif %}
+
+
+
+
+
+
+<!--------- Google Translate------->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+}
+</script> 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script> 
+<script type="text/javascript">
+$('.translation-links a').click(function () {
+var lang = $(this).data('lang');
+var $frame = $('.goog-te-menu-frame:first');
+if (!$frame.size()) {
+alert("Error: Could not find Google translate frame.");
+return false;
+}
+$frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+return false;
+});
+</script> 
+<!--------- Google Translate------->
+
+<!---{ Custom JS Start}------------>
+
+<script type="text/javascript">
+
+$('.bxslider').bxSlider({
+  auto: true,
+  autoControls: false,
+  mode: 'fade'
+});
+
+$(document).ready(function () {
+setTimeout(function() {
+	$('.carton-box > img:nth-child(1)').addClass('display-block');
+}, 1000);
+
+setTimeout(function() {
+	$('.carton-box > img:nth-child(2)').addClass('display-block');
+}, 2500);
+
+$("#search-show").click(function() {
+	   $("#input-ad").slideToggle('slow');
+});
+
+$('.sitemap').click(function() {
+	
+$('.sitemap .fa-chevron-up').toggleClass("active");
+if (!$('.sitemap .fa-chevron-up').hasClass("active")) {
+$('.footer-drop-menu').slideUp();
+} else {
+$('.footer-drop-menu').slideDown();
+}
+$('html, body').animate({scrollTop: 5000}, 500);
+return false;
+});
+
+});
+
+</script>
+
+<!---{ Custom JS End}------------>
+
+<!--------------------------------------------------{ JS End}--------------------------------------->
+{% endblock %}
